@@ -19,6 +19,11 @@ pixel_server
 # Compose data volumes
 compose/*/data/
 
+# Environment / secrets - NEVER commit
+.env
+.env.local
+*.env
+
 # OS
 .DS_Store
 Thumbs.db
