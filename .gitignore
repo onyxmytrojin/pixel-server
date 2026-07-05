@@ -24,6 +24,9 @@ compose/*/data/
 .env.local
 *.env
 
+# Personal notes - local only
+HOW_IT_WORKS.md
+
 # OS
 .DS_Store
 Thumbs.db
