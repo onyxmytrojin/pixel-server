@@ -1,0 +1,25 @@
+# Large binary files - don't commit these
+lynx-install-*/
+*.img
+*.apk
+*.zip
+*.bat
+
+# Platform tools binaries
+platform-tools/
+usb_driver/
+
+# SSH keys - NEVER commit private keys
+*.pem
+id_rsa
+id_ed25519
+pixel_server
+!*.pub
+
+# Compose data volumes
+compose/*/data/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

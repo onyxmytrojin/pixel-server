@@ -1,0 +1,13 @@
+services:
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "2222:22"    # git SSH on port 2222 (phone's port 22 is for our SSH)
+    volumes:
+      - ./data:/data
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
