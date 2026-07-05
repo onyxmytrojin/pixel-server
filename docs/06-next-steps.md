@@ -46,26 +46,20 @@ apt install -y mariadb-server
 apt install -y docker.io
 ```
 
-## Setting Up Cloudflare Tunnel (Internet Access)
+## Cloudflare Tunnel (Internet Access)
 
-Expose your server to the internet without port forwarding:
+Already set up. See [07-cloudflare-tunnel.md](./07-cloudflare-tunnel.md) for the full setup guide.
+
+**Live at:** https://shubhanmehrotra.com
+
+To restart the tunnel after a reboot:
 
 ```bash
-# Inside Debian, download cloudflared
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O /usr/local/bin/cloudflared
-chmod +x /usr/local/bin/cloudflared
-
-# Login to Cloudflare (opens browser link)
-cloudflared tunnel login
-
-# Create tunnel
-cloudflared tunnel create pixel-server
-
-# Run tunnel (exposes port 80 publicly)
-cloudflared tunnel run --url http://localhost:80 pixel-server
+# Inside Debian proot
+nohup cloudflared tunnel --no-autoupdate run --token YOUR_TOKEN > /tmp/cloudflared.log 2>&1 &
 ```
 
-You get a `*.trycloudflare.com` URL or your own domain.
+Token is stored in `.env` at the project root (not committed to git).
 
 ## Setting Up Nginx Web Server
 

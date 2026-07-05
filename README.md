@@ -7,6 +7,7 @@
 ![Linux](https://img.shields.io/badge/Linux-Debian%20(proot)-orange)
 ![SSH](https://img.shields.io/badge/SSH-Dropbear-lightgrey)
 ![Arch](https://img.shields.io/badge/Arch-ARM64-red)
+![Live](https://img.shields.io/badge/Live-shubhanmehrotra.com-brightgreen)
 
 ---
 
@@ -43,7 +44,7 @@ The phone draws ~3–5W idle, runs silently, fits in your pocket, and costs noth
          │ WiFi                │ Cloudflare Tunnel
          ▼                     ▼
    Local network         Public internet
-   192.168.x.x          yourname.trycloudflare.com
+   192.168.x.x          shubhanmehrotra.com
 ```
 
 ---
@@ -70,6 +71,12 @@ ssh -i ~/.ssh/pixel_server -p 22 root@<phone-ip>
 
 ---
 
+## Live
+
+**[shubhanmehrotra.com](https://shubhanmehrotra.com)** — served from a Pixel 7a over Cloudflare Tunnel.
+
+---
+
 ## Setup Guides
 
 Full step-by-step documentation:
@@ -78,8 +85,9 @@ Full step-by-step documentation:
 2. [Magisk Root Setup](./docs/02-magisk-root.md)
 3. [Debian Server via proot-distro](./docs/03-debian-server.md)
 4. [SSH Key Authentication](./docs/04-ssh-setup.md)
-5. [Next Steps & Services](./docs/06-next-steps.md)
-6. [Troubleshooting Log](./docs/05-troubleshooting.md) — 12 real issues encountered and fixed
+5. [Cloudflare Tunnel & Custom Domain](./docs/07-cloudflare-tunnel.md)
+6. [Next Steps & Services](./docs/06-next-steps.md)
+7. [Troubleshooting Log](./docs/05-troubleshooting.md) — 12 real issues encountered and fixed
 
 ---
 
@@ -132,7 +140,8 @@ self_host/
 │   ├── 03-debian-server.md
 │   ├── 04-ssh-setup.md
 │   ├── 05-troubleshooting.md
-│   └── 06-next-steps.md
+│   ├── 06-next-steps.md
+│   └── 07-cloudflare-tunnel.md
 └── compose/
     ├── nginx/
     ├── vaultwarden/
