@@ -32,7 +32,7 @@ server {
     server_name files.shubhanmehrotra.com;
     client_max_body_size 10G;
     location / {
-        proxy_pass http://localhost:8090;
+        proxy_pass http://localhost:8091;
         proxy_set_header Host $host;
         proxy_set_header Depth $http_depth;
         proxy_set_header Destination $http_destination;
